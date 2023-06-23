@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS customers (
 CREATE TABLE IF NOT EXISTS product (
 	product_id INT PRIMARY KEY AUTO_INCREMENT,
     product_name VARCHAR(80) NOT NULL,
-    price DECIMAL(6,2) NOT NULL,
+    price DECIMAL(6,2),
     stock_level INT NOT NULL
 );
 
