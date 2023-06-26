@@ -52,3 +52,19 @@ SELECT ci.Name, ci.Population
 FROM country co
 JOIN city ci ON co.Code=ci.CountryCode WHERE co.Name='Japan'
 ORDER BY ci.Population DESC LIMIT 5;
+
+SELECT DISTINCT co.Name, ci.CountryCode
+FROM country co
+JOIN city ci ON co.Code=ci.CountryCode WHERE co.HeadOfState='Elisabeth II';
+
+SELECT Name, Population, SurfaceArea
+FROM country WHERE Population/SurfaceArea!=0
+ORDER BY Code DESC LIMIT 10;
+
+SELECT Code, Name, Population
+FROM country
+WHERE Code=(
+	SELECT CountryCode
+    FROM city
+    WHERE MAX(Population)
+);
