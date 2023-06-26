@@ -16,8 +16,9 @@ VALUES ('COD Modern warfare', 40.20, 10),
 ('COD Modern warfare', 40.20, 5),
 ('COD Modern warfare', 40.20, 4);
 
-INSERT INTO orders (customers_id, products_id, order_date, date_collected)
-VALUES (1, 1, '2023-12-13', '2023-12-25'),
-(4, 4, '2023-12-13', '2023-12-25'),
-(3, 3, '2023-12-13', '2023-12-25');
+INSERT INTO orders (customers_id, products_id, order_date)
+VALUES (1, 1, '2023-12-13'),
+(4, 4, '2023-12-13'),
+(3, 3, '2023-12-13');
 
+SELECT * FROM orders
